@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM Part 2</title>
+    <style>
+        body{
+            background: black;
+            color: white;
+            font: normal 54pt arial;
+        }
+        input{
+            font: normal 33pt arial
+        }
+        div{
+            margin-top: 1.5cm;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Números</h1>
+    <input type="number" id="n1">
+    +
+    <input type="number" id="n2">
+    <input type="button" value="somar" id="botao">
+    <div id="res">Resultado =</div>
+    <script>
+        document.getElementById('botao').addEventListener('click', clicar)
+        function clicar(){
+            var txn1 = document.getElementById('n1')
+            var txn2 = document.getElementById('n2')
+            var n1 = Number(txn1.value)
+            var n2 = Number(txn2.value)
+            var s = n1 + n2
+            document.getElementById('res').innerHTML = `Resultado = <strong>${s}</strong>`
+        }
+    </script>
+    
+</body>
+</html>

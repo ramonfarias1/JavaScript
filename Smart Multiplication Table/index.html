@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SMART TABUADA</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número específico: <input type="number" name="numero" id="num"></p>
+            <p>
+                <input type="button" value="+  Adição" id="adi" onclick="MostrarTabuadaAdicao()">
+                <input type="button" value="-  Subtração" id="sub" onclick="MostrarTabuadaSubtracao()">
+                <input type="button" value="x  Multiplicação" id="mult" onclick="MostrarTabuadaMultiplicacao()">
+                <input type="button" value="&divide;  Divisão" id="divi" onclick="MostrarTabuadaDivisao()">
+                <input type="button" value="Todas" id="tod" onclick="MostrarTodasTabuadas()">
+            </p>
+        </div>
+        <div id="tab">
+            <h2 id="ttladi">+ Adição +</h2>
+            <div id="tabadi"></div>
+            <p></p>
+            <h2 id="ttlsub">- Subtração -</h2>
+            <div id="tabsub"></div>
+            <p></p>
+            <h2 id="ttlmult">x Multiplicação x</h2>
+            <div id="tabmult"></div>
+            <p></p>
+            <h2 id="ttldivi">&divide; Divisão &divide;</h2>
+            <div id="tabdivi"></div>
+            <p></p>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright&copy;2022 Ramon Farias</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM Part 1</title>
+    <style>
+        body{
+            background: black;
+        }
+        div#area{
+            font: normal 20pt arial;
+            color: white;
+            width: 180px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="area" class="area" name="area" onmouseenter="entrar()" onclick="clicar()" onmouseout="sair()" onmousedown="clicouSegurou()" onmousemove="mover()" onmouseup="soltou()">
+        Interaja...
+    </div>
+    -->
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+        /*
+        function entrou(){
+            document.getElementById('area').style.background = 'grey'
+        }
+        function clicar(){
+            document.getElementsByClassName('area')[0].innerHTML = '<u>Interaja...</u>'
+        }
+        function saiu(){
+            document.getElementsByName('area')[0].innerHTML = 'Interaja...'
+            document.getElementsByTagName('div')[0].style.background = 'black'
+        }
+        */
+       var areajs = document.querySelector('div#area')
+
+       areajs.addEventListener('mouseenter', entrar)
+       areajs.addEventListener('click', clicar)
+       areajs.addEventListener('mousedown', clicouSegurou)
+       areajs.addEventListener('mouseout', sair)
+
+       function entrar(){
+           areajs.innerHTML = 'Entrou!'
+           areajs.style.background = 'grey'
+       }
+       function clicar(){
+           areajs.innerHTML = 'Clicou!'
+           areajs.style.background = 'green'
+    }
+    function clicouSegurou(){
+        areajs.innerHTML = 'Segurando...'
+        areajs.style.background = 'blue'
+    }
+    /*function mover(){
+        areajs.innerHTML = 'Movendo...'
+    }
+   function soltou(){
+       areajs.innerHTML = 'Soltou'
+       areajs.style.background = 'green'
+   }
+   */
+    function sair(){
+        areajs.innerHTML = 'Saiu!'
+        areajs.style.background = 'black'
+    }
+    </script>
+</body>
+</html>

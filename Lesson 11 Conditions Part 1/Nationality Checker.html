@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Brasileiro</title>
+</head>
+<body>
+    <h1>Verificador de Ladrão</h1>
+    Digite aqui o país onde você nasceu: <input type="text" id="pais">
+    <input type="button" id="botao" value="verificar">
+    <div id="resp">resposta</div>
+    <script>
+        document.getElementById('botao').addEventListener('click', clicar)
+        function clicar(){
+            var pais = document.getElementById('pais').value.toUpperCase()
+            if(pais == 'BRASIL'){
+                document.getElementById('resp').innerHTML = `Você é da(o) ${pais}, portanto é um ladrão!`
+            }else{
+                document.getElementById('resp').innerHTML = `Você é da(o) ${pais}, portanto gruingou!`
+            }
+        }
+    </script>
+</body>
+</html>

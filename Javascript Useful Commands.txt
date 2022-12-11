@@ -1,0 +1,24 @@
+varExample.toLocaleString('en-US', {style: 'currency', currency: 'USD'})
+
+varExample.addEventListener('click', functionName)
+
+varExample.addEventListener('keydown', functionName)// Remember to put the "event" parameter between the parentheses of the function
+
+var now = new Date()
+var example = now.getDay()/ getDate()/ getMonth()/ getFullYear()/ getHours()/ getMinutes()/ getSeconds()
+
+onload = functionName()
+
+setTimeout('functionName()', 500)
+
+<img id="img" src="imageName.png" alt=""> // in HTML
+img.src='imageName.png' // in Javascript
+
+var example = document.createElement('img, div, input, h1, label, etc') // create a element
+example.setAttribute('id, src, value, name, class, type, etc', 'Name') // create a attribute
+responseVariable.appendChild(ElementVariable) // adds the element created in JavaScript
+
+example.value = ''
+example.focus()
+
+

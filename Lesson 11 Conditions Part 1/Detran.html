@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Medidor de Velocidade</h1>
+    Velocidade do Veículo:<input type="number" id="vel"><strong>KM/H</strong>
+    <input type="button" value="medir" id="botao">
+    <div id="res"></div>
+    <script>
+        document.getElementById('botao').addEventListener('click', clicar)
+        function clicar(){
+            var txvel = document.getElementById('vel')
+            var vel = Number(txvel.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>A sua velocidade é de <strong>${vel}KM/H</strong></p>`
+            if (vel > 60){
+                res.innerHTML +='<p>Você Ultrapassou a velocidade máxima! <strong>Multado!</strong></p>'
+            }
+            res.innerHTML += '<p>Tenha um(a) Ótimo(a) dia/noite</p>'
+        }
+    </script>
+</body>
+</html>

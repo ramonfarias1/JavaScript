@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos DOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font: normal 12pt arial
+        }
+    </style>
+</head>
+<body>
+    <h1 Class = titulo>Estudando DOM</h1>
+    <p Class = p1>Primeiross Passo</p>
+    <p Class = p2><strong>DOM em Negrito</strong></p>
+    <div Class = div1>Clique Aqui</div>
+    <script>
+        //window.document.getElementsByTagName('p')[1].style.color = 'pink'
+        //window.document.getElementById('titulo').innerHTML = 'to cagado'
+        var titulo = window.document.getElementsByClassName('titulo')[0]
+        window.document.write(titulo.innerHTML)
+        titulo.style.color = 'red'
+        window.document.getElementsByClassName('p1')[0].style.color = 'green'
+        //window.document.querySelector('div#div1').innerHTML = 'Clica Não'
+        var divv = window.document.querySelector('div.div1')
+        divv.innerHTML = 'Clica Não'
+        divv.style.background = 'white'
+        divv.style.color = 'black'
+
+    </script>
+    
+</body>
+</html>

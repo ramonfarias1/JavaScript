@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora Certa</title>
+    <style>
+        body{
+            color: white;
+            margin-top: 18.5%;
+            text-align: center;
+            font-family: Arial;
+            font-size: 600%
+        }
+    </style>
+</head>
+<body id="corpo" onload="time()">
+    <div id="horacerta"></div>
+    <script>
+        function time(){
+        var agora = new Date()
+        var hora = agora.getHours()
+        var minutos = agora.getMinutes()
+        var segundos = agora.getSeconds()
+        var horacerta = document.getElementById('horacerta')
+        horacerta.innerHTML = `${hora}:${minutos}:${segundos}`
+        setTimeout('time()', 500)
+        if (hora >=6 && hora <12){
+            document.getElementById('corpo').style.background = 'aqua'
+        }else if(hora >=12 && hora <18){
+            document.getElementById('corpo').style.background = 'yellow'
+        }else{
+            document.getElementById('corpo').style.background = 'black'
+        }
+        }
+    </script>
+</body>
+</html>

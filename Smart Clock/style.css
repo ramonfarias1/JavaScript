@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    font: normal 20px arial;
+    color: white;
+}
+
+h1{
+    text-shadow: 1px 1px #121212, -1px 1px #121212, 1px -1px #121212, -1px -1px #121212;
+}
+
+section{
+    background: white;
+    color: black;
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: -10px -10px #121212;
+}
+
+footer{
+    font-style: italic;
+    text-shadow: 1px 1px #121212, -1px 1px #121212, 1px -1px #121212, -1px -1px #121212;
+}
+
+div#clock{
+    font: normal 30px fantasy;
+}

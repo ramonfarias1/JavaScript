@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+    font: normal 20px arial;
+    background: #181818;
+    color: white;
+}
+
+section{
+    background: #121212;
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+}
+
+select{
+    width: 150px;
+}
+
+footer{
+    font-style: italic;
+}

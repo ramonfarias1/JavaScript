@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOCÊ PODE VOTAR? VERIFIQUE AGORA!</title>
+    <style>
+        body{
+            font-family: Times New Roman;
+            font-size: 150%;
+            color: white;
+            background-color:#121212;
+            text-align: center;
+        }
+        div{
+            margin-top: 10%;
+        }
+        input{
+            font-size: 80%;
+        }
+        input#botao{
+            color: white;
+            background-color: green;
+        }
+        footer{
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>VOCÊ TEM IDADE PARA VOTAR?<br>VERIFIQUE AGORA!</h1>
+    <div>
+        Idade ou Ano de Nascimento: <input type="number" id="idadeOuAno">
+        <input type="button" value="VERIFICAR" id="botao">
+        <p id="resp"></p>
+        <footer>Copyright ©2022 Ramon Farias</footer>
+    </div>
+    <script>
+        var botao = document.getElementById('botao')
+        botao.addEventListener('click', clicar)
+        botao.addEventListener('mouseenter', entrar)
+        botao.addEventListener('mouseout', sair)
+
+        function entrar(){
+            botao.style.cursor = 'pointer'
+            botao.style.borderColor='white'
+        }
+        function sair(){
+            botao.style.borderColor='transparent'
+        }
+        function clicar(){
+            var agora = new Date()
+            var anoAtual = agora.getFullYear()
+            var resp = document.getElementById('resp')
+            var idadeOuAno = Number(document.querySelector('input#idadeOuAno').value)
+            if (idadeOuAno <=122 || idadeOuAno >= 1900 ){
+                if (idadeOuAno >=1900 && idadeOuAno <= anoAtual){
+                    idadeOuAno = anoAtual - idadeOuAno
+                }
+                resp.innerHTML = `Você tem <strong>${idadeOuAno} anos</strong>.`
+                if (idadeOuAno <16){
+                    resp.innerHTML +='<p>Você ainda <strong>NÃO PODE VOTAR</strong></p>'
+                }else if (idadeOuAno < 18 || idadeOuAno > 65){
+                    resp.innerHTML +='<p>O seu voto é <strong>OPCIONAL</strong></p>'
+                }else {
+                    resp.innerHTML +='<p>O seu voto é <strong>OBRIGATÓRIO</strong></p>'
+                }
+            }else{
+                alert('Idade ou Ano Inválidos!, Por Favor, Digite Novamente.')
+            }
+        }
+    </script>
+</body>
+</html>
